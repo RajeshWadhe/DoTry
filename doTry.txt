@@ -1,0 +1,9 @@
+
+
+1->>git cmds --> complete overview
+2->>git repo-> extract files and import directly.
+3->>encrypting files and store/retrieve
+4->>aws dashboard --> all services
+5->>aws SFTP --> how to launch and configure
+6->>Python Adv topics and applications / use of git/ server/ serverless applications
+7->>
