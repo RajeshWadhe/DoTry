@@ -1,0 +1,160 @@
+
+git init
+
+git add <file>
+
+git status
+
+git commit
+
+git push
+
+git pull
+
+git clone
+
+----------------------------------------------------
+
+create a folder on desktop --> test-git
+test-git --> right-click--> open with git-bash here
+
+>>touch index.html
+>>touch app.js
+
+****
+open index.html:  
+<html>
+<head>
+<title>My App</title>
+</head>
+<body>
+This is my app!
+login form
+</body>
+</html>
+*****
+
+>>git init
+
+Open test-git folder --> view --> options --> show hidden
+--> hide extensions for unknown files
+
+files will be on folder now
+
+>>git config --global user.name "RajeshWadhe"
+>>git config --global user.email "rajeshwadhe94@gmail.com"
+>>git add index.html
+>>git commit
+new file: index.html
+untracked: app.js
+>>git rm --cached index.html
+now both files are untracked
+
+>>git add .
+>>git status
+now both files are in staging area --> to be commited both
+
+now go to index.html
+add some changes in it and save it
+>>git status
+index.html --> changes not commited 
+so add again
+>>git add .
+>>git status
+add both again
+
+>>git commit
+vm editor
+click i to go ti insert mode
+just remove # before initial commit
+to escape: esc --> :wq enter
+
+>>git status
+nothing to commit
+
+*************************************
+
+go to app.js
+cosole.log('hello');
+
+>>git add .
+>>git commit -m 'changed app.js'
+
+*************************************
+
+>>touch .gitignore
+>>touch log.txt
+
+log.txt
+error
+
+log.txt
+log.txt
+
+>>git add .
+>>git status
+chmages to be commited--> new file: .gitignore
+
+now create folder dir1 --> app1.js --> console.log('123');
+now create folder dir2 --> app1.js --> console.log('123');
+.gitignore --> type following
+log.txt
+/dir2
+
+>>git branch login
+not chnages to branch
+>>git commit -m 'another change'
+>>git checkout login
+we are now in login branch
+
+>>touch login.html
+type: --> login 
+index.html --> type login page
+
+>>git add .
+>>git commit -m 'login form'
+>>git checkout matser
+login page gone
+
+>>git merge login
+editor
+type top
+Added login
+and esc
+files will be visiblegit 
+
+****************************************
+========================================
+
+>>git remote add origin https://github.com/RajeshWadhe/Demo.git
+>>git remote
+>>git push -u origin master
+
+now login window will appear: just login in it
+
+>>touch README.md
+type:
+#MyApp
+This is my app
+
+>>git add .
+>>git commit -m 'added readme'
+>>git push
+complete files are pushed to git --> check web
+
+************************************
+
+we can pull files
+create folder --> test-git-2
+right click with git-bash
+>>git clone https://github.com/RajeshWadhe/Demo.git
+
+it pulls everything
+
+if changes are there
+>>git pull
+already-up-to-date
+
+
+
+
