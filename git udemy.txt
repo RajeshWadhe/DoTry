@@ -1,0 +1,215 @@
+git-for-windows
+
+>>git version
+
+git requires email and password
+
+>>git config --global user.name "Abe Lincoln"
+>>git config --golbal user.email "mrabe@git.training"
+>>git config --global --list
+
+user.name=Abe Lincoln
+user.email=mrabe@git.training
+
+--------------------------------
+
+cloning of repository
+
+copy git https url
+>>git clone git-URL
+o> it will clone the repository automatically
+
+>>ls
+o>dir
+>>cd dir
+>>ls
+>>git status
+
+o> on master branch or not
+
+-----------------------------------
+
+create a file and add to git
+
+>>echo "Test git quick start demo" >> start.txt
+>>ls
+>>cat start.txt
+Test git quick start demo
+>>git status
+on branch master
+
+>>git add start.txt
+>>git status
+prompt the committed changes
+>>git commit -m "Adding start text file"
+adding start file 
+
+open a browser -- you won't see any file
+>>git push origin master
+it will display username and password. and also display it is trying to add file to the git.
+
+open browser --> you will see the file added to it.
+
+------------------------------------
+------------------------------------
+
+THE ISSUE:
+
+>>which git
+location displayed
+/user/bin/git
+
+>>git version
+error
+
+>>sudo xcode-select --install
+password: 
+
+get xcode  	or  	now-now 	or 	install
+
+click install
+click agree 
+installer will install latest copy of version
+
+>>git version
+no error
+latest version
+
+
+ALTERNATIVE GIT INSTALL
+
+----------------------------------
+
+NEW LOCAL REPOSITORY
+STARTING ON YOUR COMPUTER
+
+
+https://hipsum.co/
+
+>>pwd
+/users/jason
+
+>>cd projects
+
+>>git init fresh-project
+created folder 
+>>ls
+>>cd fresh-projects/
+>>ls
+>>ls -al
+.git folder
+list is displayed 
+workign folder
+
+>>ls
+>>cd..
+back
+
+>>pwd
+>>git status
+initial commit
+
+https://hipsum.co/ 
+copy the para
+
+>>mate hipster.txt
+file is open
+>>ctrl+v
+>>save -> ctrl+s
+>>git status
+file stored
+file untracked
+
+>>git add hipster.txt
+>>git status 
+now file tracked
+
+>>git commit 
+default editor 
+new file: hipster.txt
+"Adding new file with hipster ipsum 
+Thus was done with Text Mate 2"
+add at the top of editor
+
+save and close
+
+file changed
+(root-commit)
+first commit of this repo
+
+>>git status
+
+>>pwd
+>>go to fresh-projects
+
+to delete 
+>>rm -rf fresh-project/
+>>ls
+no more git repo
+
+
+----------------------------
+
+
+ADDING GIT TO YOUR EXISTING PROJECT
+
+www.initializr.com
+
+click bootstrap
+keep defaults
+select other options too
+download it
+
+initializr.zip
+
+>>pwd
+>>cd projects/
+>>unzip ~/downloads/initializr.zip
+file extracting...
+>>ls
+initializr/ 
+
+giving it a new name
+>>mv initializr web-project
+>>ls
+web-project/
+>>cd web-project/
+>>ls
+all unzipped files
+>>git init
+initilaized new repo with curent directory
+>>ls -al
+.git folder 
+>>git status
+master-branch
+initial commit
+untracked files present
+
+>>git add .
+>>git status 
+list all files which are part of project
+list displayed
+
+>>git commit -m "My first commit, inline"
+>>git status
+we have nothing to commit, we are celan directory
+
+>>git status
+on branch
+working dir clean
+>>ls -al
+.git folder
+if no .git folder means not managed by git
+
+delete it
+>>rm -rf .git
+>>ls
+all files 
+>>cd ..
+>>cd web-project/
+>>rm -rf web-project/
+>>ls
+
+
+
+
