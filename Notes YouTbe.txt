@@ -1,0 +1,49 @@
+
+Kubernates for Beginners - Docker Containers
+
+Docker Containers
+
+own libraries and own environements
+
+Docker installed on OS
+then containers are sub-part
+
+Docker container --> shares the kernel
+
+docker -> purpose-> to containerize application and ship them
+docker-> manages containers with application, libraries.
+
+-------------------------------------------------
+
+Containers vs VM
+
+VM have a hypervisor layer
+multiple VM --> heavy --> overload
+
+size in VM --> GBs --> heavy --> overhead 
+docker containers --> MBs --> light-weight --> faster 
+VM in slow
+
+Docker have less isolation
+VM can have multiple OS 
+rather docker can have only one OS
+VM are completely isolated.
+
+-----------------------------
+
+>>docker run ansible   
+>>docker run mongodb
+>>docker run redis
+>>docker run nodejs
+
+-----------------------------
+
+Container vs Images
+Docker Image --> package template plan 
+to create docker containers
+
+------------------------------
+
+Docker Image  --> app.war + dockerFile 
+this image can be run on any platform 
+this image used to deploy the application
