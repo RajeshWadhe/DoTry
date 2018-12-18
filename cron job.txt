@@ -1,0 +1,83 @@
+Cronjob for both log & email :
+
+Run once a month at midnight of the first day of the month: 0 0 1 * *
+
+0 0 1 * * /home/User/script.sh > /home/User/cronlog/`date +\%Y-\%m-\%d-\%H:\%M:\%S`-cron.log 2>&1 ; mailx -s "CronJob is run successfully" someone@domain.com,someone1@domain.com
+
+
+or
+
+00 06 * * * /usr/bin/php /home/user/myapp/testing.sh -e prod 1>> /var/log/CRONLOGS/testing_prod.log 2>&1; mailx -s "Cron output" me@example.org < /var/log/CRONLOGS/testing_prod.log
+
+
+
+*****************************************************************
+REFERENCE VIDEO :--> MySQL restart
+
+https://www.youtube.com/watch?v=kKNenZ8Wr7s
+
+Script for checking if mysql is running or not
+--------------------------------------------------------------------------------
+
+#!/bin/bash
+if [[ ! "$(service mysql status)" =~ "start/running" ]]
+then
+    service mysql start
+fi
+
+--------------------------------------------------------------------------------
+
+Give the write permission to the script
+--------------------------------------------------------------------------------
+
+chmod +x /etc/restartmysql
+
+--------------------------------------------------------------------------------
+
+now in Crontab paste
+--------------------------------------------------------------------------------
+
+#Restarting mysql
+
+--------------------------------------------------------------------------------
+* * * * * root /etc/restartmysql
+
+
+
+
+
+
+*******************************************
+*******************************************
+
+9.30 am and 5.30 pm
+mon to friday
+
+min hour date month dow
+
+30  9,17   *   *   mon-fri
+
+******************************************
+******************************************
+
+Every 90 minutes
+
+min hour date month dow
+
+0   */3    *    *    *
+30  1/3    *    *    *
+******************************************
+******************************************
+
+23.30 on the last day of every month
+
+min hour date month dow
+
+30   23    28-31  *   *   test $(date -d tomorrow +%d) -eq 1 && /tmp/myscript.sh
+
+**********************************************
+
+https://www.youtube.com/watch?v=ljgvo2jM234
+
+**********************************************
+
