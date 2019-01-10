@@ -7,3 +7,6 @@
 5->>aws SFTP --> how to launch and configure
 6->>Python Adv topics and applications / use of git/ server/ serverless applications
 7->>
+
+Search this into Google
+linux commands to execute crontab to automate creation of folders in s3 bucket
